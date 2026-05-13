@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Phase 1 deploys static + dynamic Next.js routes via @netlify/plugin-nextjs.
+# Required environment variables (set in Netlify site settings → Environment):
+#   GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO, GITHUB_BRANCH, NEXT_PUBLIC_APP_NAME.
+# See README.md → "Deploy" for the full setup.

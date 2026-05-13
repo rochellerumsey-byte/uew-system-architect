@@ -18,15 +18,34 @@ Cross-session contract. Read first before doing meaningful work in this repo.
 
 ## Active phase
 
-**Phase 1: Foundation**
-Scope file: `PHASE_1_SCOPE.md` (added in Commit 6)
-Status: Active
+**Phase 1 complete — 2026-05-13. Standing by for Phase 2.**
+
+Scope file: none active
+Status: Complete
+
+Phase 1 closed 2026-05-13. All 6 commits shipped:
+- Commit 1: project scaffold and config
+- Commit 2: type definitions and zod schemas
+- Commit 3: github storage layer with api routes
+- Commit 4: home page with blueprint list and create flow
+- Commit 5: uew context data for suggest-defaults buttons
+- Commit 6: deployment, scope doc, phase 1 closeout
+
+---
+
+## Previous phase
+
+**Phase 1: Foundation** — closed 2026-05-13.
+Scope file: `PHASE_1_SCOPE.md`
+Status: Closed.
 
 ---
 
 ## Closed phases
 
-_(none yet)_
+| Phase | Theme | Items | Closed |
+|---|---|---|---|
+| 1 | Foundation | 6 | 2026-05-13 |
 
 ---
 
@@ -109,4 +128,16 @@ Each component focused and small. Server components by default; client component
 
 **Phase 2: Editor shell.** Toolbar (Save, Status, Toggle Current/Future, Export dropdown), 12-tab navigation, blueprint detail page at `/blueprints/[id]`. Project Basics tab is the first one wired end-to-end as the pattern other tabs follow.
 
-After Phase 2: Phase 3 (Suggest UEW Defaults), Phase 4 (tab content fill-in across all 12 tabs), Phase 5 (two-pass workflow wiring).
+After Phase 2: Phase 3 (Suggest UEW Defaults), Phase 4 (tab content fill-in across all 12 tabs), Phase 5 (two-pass workflow wiring), Phases 6–9 (export generators), Phase 10 (side-by-side compare), Phase 11 (Self-Filing seed + polish).
+
+---
+
+## Recent decisions added during Phase 1 execution
+
+- **Scaffold tooling lock:** Next.js `14.2.35`, shadcn CLI `2.1.8`, Tailwind v3 (HSL color variables, not Tailwind v4 oklch). Future scaffold revisions stay on the same major versions until Phase 11 closeout — keeps the editor build path predictable.
+- **`/blueprints/new` is a redirect**, not a dedicated page. The New Blueprint dialog on the home page is the only create entry point in v1.
+- **Detail page is a server component** that calls `getBlueprint()` directly. No client-side fetch on the detail page until Phase 2 needs it for the editor's optimistic updates.
+- **Default `createdBy` is `"rochelle"`** for v1. Replace when auth lands.
+- **Storage layer error mapping:** Octokit 404 on `/blueprints` folder returns `[]` (not error), 404 on a single file returns `null` (not error). 404 specifically on a deleted blueprint surfaces as `NotFoundError` in the DELETE flow. The split avoids a confusing first-run experience when the folder doesn't exist yet.
+- **`.gitkeep`** committed inside the storage repo's `/blueprints` folder so the very first `saveBlueprint()` call has somewhere to land. Documented in README "Storage initialization" section.
+- **Zod v4 record syntax:** `z.record(z.string(), z.unknown())` (not `z.record(z.unknown())`). Future schemas must follow.
