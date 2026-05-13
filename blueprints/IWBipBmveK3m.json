@@ -1,0 +1,139 @@
+{
+  "id": "IWBipBmveK3m",
+  "schemaVersion": 1,
+  "title": "Test Blueprint",
+  "systemName": "Test System",
+  "description": "Verifying storage works",
+  "createdAt": "2026-05-13T21:53:01.047Z",
+  "updatedAt": "2026-05-13T21:53:01.047Z",
+  "createdBy": "rochelle",
+  "status": "draft",
+  "tabs": {
+    "projectBasics": {
+      "currentState": {
+        "title": "",
+        "owner": "",
+        "problem": "",
+        "audience": "",
+        "scope": "",
+        "businessValue": ""
+      },
+      "futureState": {
+        "title": "Test Blueprint",
+        "owner": "",
+        "problem": "",
+        "audience": "",
+        "scope": "",
+        "businessValue": ""
+      },
+      "hasCurrent": false,
+      "lastEditedTab": "future"
+    },
+    "kickoffSix": {
+      "currentState": {
+        "data": {}
+      },
+      "futureState": {
+        "data": {}
+      },
+      "hasCurrent": false,
+      "lastEditedTab": "future"
+    },
+    "phaseMap": {
+      "currentState": {
+        "data": {}
+      },
+      "futureState": {
+        "data": {}
+      },
+      "hasCurrent": false,
+      "lastEditedTab": "future"
+    },
+    "phaseDetails": {
+      "currentState": {
+        "data": {}
+      },
+      "futureState": {
+        "data": {}
+      },
+      "hasCurrent": false,
+      "lastEditedTab": "future"
+    },
+    "agentRoster": {
+      "currentState": {
+        "data": {}
+      },
+      "futureState": {
+        "data": {}
+      },
+      "hasCurrent": false,
+      "lastEditedTab": "future"
+    },
+    "agentAnatomy": {
+      "currentState": {
+        "data": {}
+      },
+      "futureState": {
+        "data": {}
+      },
+      "hasCurrent": false,
+      "lastEditedTab": "future"
+    },
+    "techStack": {
+      "currentState": {
+        "data": {}
+      },
+      "futureState": {
+        "data": {}
+      },
+      "hasCurrent": false,
+      "lastEditedTab": "future"
+    },
+    "systemRACI": {
+      "currentState": {
+        "data": {}
+      },
+      "futureState": {
+        "data": {}
+      },
+      "hasCurrent": false,
+      "lastEditedTab": "future"
+    },
+    "decisionRules": {
+      "currentState": {
+        "data": {}
+      },
+      "futureState": {
+        "data": {}
+      },
+      "hasCurrent": false,
+      "lastEditedTab": "future"
+    },
+    "hierarchy": {
+      "currentState": {
+        "data": {}
+      },
+      "futureState": {
+        "data": {}
+      },
+      "hasCurrent": false,
+      "lastEditedTab": "future"
+    },
+    "risks": {
+      "currentState": {
+        "data": {}
+      },
+      "futureState": {
+        "data": {}
+      },
+      "hasCurrent": false,
+      "lastEditedTab": "future"
+    },
+    "exportTab": {
+      "currentState": {},
+      "futureState": {},
+      "hasCurrent": false,
+      "lastEditedTab": "future"
+    }
+  }
+}
