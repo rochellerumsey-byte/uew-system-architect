@@ -1,0 +1,85 @@
+{
+  "company": {
+    "name": "United Energy Workers Healthcare",
+    "shortName": "UEW",
+    "description": "Home health for former DOE energy workers under EEOICPA and RECA federal compensation programs",
+    "scale": "26 states, 41 offices, ~500 staff",
+    "structure": "Integrated pipeline, claims, and care platform with three regional sister companies"
+  },
+  "compliance": {
+    "constraints": [
+      "Support, assistance, guidance only - never filing, directing, or acting on behalf of claimants",
+      "PHI requires Compliance review for any system handling patient data",
+      "Anti-kickback statute compliance required for referral or partnership relationships",
+      "DOL audit requirements for EEOICPA claims handling",
+      "HIPAA for any PHI touch points"
+    ]
+  },
+  "techStack": {
+    "sanctioned": [
+      "Axxess (home health EMR)",
+      "Careficient (home health platform)",
+      "HubSpot (CRM, transitioning from Salesforce)",
+      "Netsuite (financial)",
+      "Snowflake (data warehouse)",
+      "Hex (analytics)",
+      "Power BI",
+      "Microsoft 365",
+      "Teams",
+      "Copilot Studio",
+      "Power Automate"
+    ]
+  },
+  "departments": [
+    "Clinical",
+    "Claims",
+    "Growth",
+    "Finance",
+    "Legal",
+    "Compliance",
+    "IT",
+    "Human Resources",
+    "Marketing"
+  ],
+  "agentPatterns": [
+    {
+      "name": "Compliance Sub-Agent",
+      "description": "Reviews any AI output before user-facing display, flags PHI or compliance risk, escalates to human review"
+    },
+    {
+      "name": "Orchestrator Agent",
+      "description": "Coordinates multi-agent workflows, routes tasks to specialized agents, maintains conversation state"
+    },
+    {
+      "name": "Knowledge Layer",
+      "description": "RAG implementation grounding agent responses in authoritative sources (EEOICPA bulletins, internal policies)"
+    },
+    {
+      "name": "Human Review Gate",
+      "description": "Required checkpoint for high-stakes decisions, ensures human oversight on patient-facing actions"
+    }
+  ],
+  "valuesCategories": [
+    "Growth",
+    "Outcomes",
+    "Capacity",
+    "Retention",
+    "Risk"
+  ],
+  "languageRules": {
+    "avoid": [
+      "headcount reduction",
+      "staff replacement",
+      "automating jobs",
+      "reducing positions",
+      "eliminating labor"
+    ],
+    "use": [
+      "operational capacity returned",
+      "workforce support",
+      "scalability",
+      "AI-assisted workflow improvement",
+      "reduced administrative burden"
+    ]
+  }
+}

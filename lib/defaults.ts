@@ -17,6 +17,42 @@ import type {
   ProjectBasicsData,
   TabContent
 } from "./types";
+import uewContext from "@/content/defaults/uew-context.json";
+
+// ── UEW context accessor ──────────────────────────────────
+// Loaded statically at build time from /content/defaults/uew-context.json.
+// Phase 3 "Suggest UEW Defaults" buttons consume this. Exposed here so all
+// Phase-N tab editors import from a single typed entry point.
+
+export interface UEWContext {
+  company: {
+    name: string;
+    shortName: string;
+    description: string;
+    scale: string;
+    structure: string;
+  };
+  compliance: {
+    constraints: string[];
+  };
+  techStack: {
+    sanctioned: string[];
+  };
+  departments: string[];
+  agentPatterns: Array<{ name: string; description: string }>;
+  valuesCategories: string[];
+  languageRules: {
+    avoid: string[];
+    use: string[];
+  };
+}
+
+export const UEW_CONTEXT: UEWContext = uewContext as UEWContext;
+
+/** Convenience getter so call sites don't import the JSON path directly. */
+export function getUEWContext(): UEWContext {
+  return UEW_CONTEXT;
+}
 
 /** Inputs for createBlankBlueprint. The route handler builds this from the
  *  client's POST body + a nanoid-generated id. */
