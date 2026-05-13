@@ -1,0 +1,9 @@
+# Blueprint storage
+#
+# This folder holds blueprint JSON files written by the GitHub-backed storage
+# layer at /lib/github-storage.ts. Each blueprint is stored as a single JSON
+# file at /blueprints/{id}.json, where {id} is a 12-char nanoid.
+#
+# This .gitkeep is needed so the folder exists in the GitHub repo before any
+# blueprints are created. Once the first blueprint is saved, this file can be
+# removed or left alone.
